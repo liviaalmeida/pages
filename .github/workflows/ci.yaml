@@ -12,6 +12,8 @@ jobs:
   setup:
     name: Setup
     runs-on: ubuntu-latest
+    outputs:
+      yarn-cache-key: ${{ steps.cache.outputs.cache-hit }}
     steps:
       - name: Checks out code
         uses: actions/checkout@v3
@@ -20,9 +22,17 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version-file: '.nvmrc'
-      
+
       - name: Installs yarn
         run: npm install -g yarn
+
+      - name: Cache yarn cache
+        id: cache
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.cache/yarn
+          key: yarn-cache-${{ hashFiles('**/yarn.lock') }}
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
