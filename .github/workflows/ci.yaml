@@ -9,11 +9,9 @@ on:
       - main
 
 jobs:
-  setup:
-    name: Setup
+  lint:
+    name: Lint
     runs-on: ubuntu-latest
-    outputs:
-      yarn-cache-key: ${{ steps.cache.outputs.cache-hit }}
     steps:
       - name: Checks out code
         uses: actions/checkout@v3
@@ -26,48 +24,15 @@ jobs:
       - name: Installs yarn
         run: npm install -g yarn
 
-      - name: Cache yarn cache
-        id: cache
-        uses: actions/cache@v3
-        with:
-          path: |
-            ~/.cache/yarn
-          key: yarn-cache-${{ hashFiles('**/yarn.lock') }}
-
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-
-      - name: Upload node_modules
-        uses: actions/upload-artifact@v4
-        with:
-          name: node_modules
-          path: node_modules
-
-  lint:
-    name: Lint
-    needs: setup
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checks out code
-        uses: actions/checkout@v3
-
-      - name: Sets up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version-file: '.nvmrc'
-
-      - name: Download node_modules
-        uses: actions/download-artifact@v4
-        with:
-          name: node_modules
-          path: node_modules
 
       - name: Runs lint
         run: yarn lint
 
   test_unit:
     name: Unit Tests
-    needs: [setup, lint]
+    needs: lint
     runs-on: ubuntu-latest
     steps:
       - name: Checks out code
@@ -78,11 +43,11 @@ jobs:
         with:
           node-version-file: '.nvmrc'
 
-      - name: Download node_modules
-        uses: actions/download-artifact@v4
-        with:
-          name: node_modules
-          path: node_modules
+      - name: Installs yarn
+        run: npm install -g yarn
+  
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
 
       - name: Runs unit tests
         run: yarn test:unit
