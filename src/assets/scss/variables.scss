@@ -1,0 +1,35 @@
+/*-------------  COLORS  -------------*/
+
+$lv-white: rgb(255, 255, 255);
+$lv-gray: rgb(215, 215, 215);
+$lv-gray-50: rgb(210, 210, 210);
+$lv-grey: rgb(150, 150, 150);
+$lv-dark: rgb(80, 80, 80);
+$lv-darker: rgb(30, 30, 30);
+
+/*-------------  TIMES  -------------*/
+
+$animation-time: 0.4s;
+
+/*-------------  MIXINS  -------------*/
+
+@mixin animation-on-load($animation-name) {
+  animation: 2*$animation-time ease-out 0s 1 $animation-name;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin phone {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}

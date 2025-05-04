@@ -1,0 +1,162 @@
+{
+  "title": {
+    "contact": "Contact",
+    "education": "Education",
+    "experience": "Professional Experience",
+    "languages": "Languages",
+    "position": "Front-end Engineer",
+    "presentations": "Talks",
+    "programming": "Programming Skills",
+    "projects": "Projects",
+    "socials": "Socials"
+  },
+  "menu": {
+    "about": "About",
+    "knowledge": "Knowledge",
+    "experience": "Experience"
+  },
+  "skills": {
+    "languages": "Languages",
+    "web": "Web pages",
+    "frameworks": "Frameworks",
+    "tools": "Tools",
+    "tests": "Tests",
+    "databases": "Databases",
+    "skill": {
+      "accessibility": "accessibility"
+    }
+  },
+  "education": [
+    {
+      "name": "Universidade Federal de Minas Gerais (UFMG)",
+      "level": "2021",
+      "intro": "Bachelor's Degree",
+      "listing": ["Computer Science"]
+    }
+  ],
+  "experience": [
+    {
+      "title": "Ecosia",
+      "link": "https://ecosia.org",
+      "duration": "apr 2021 - present",
+      "intro": "Front-end Engineer:",
+      "description": "working as a front-end engineer for the search engine that plants trees. I use JavaScript with Vue, Nuxt and Vite, as well as HTML and SCSS to create web pages, both static and server-side. I evaluate the performance and accessibility of these pages, ensure their integrity through testing, and make sure we deliver enjoyable experiences to our users."
+    },
+    {
+      "title": "Symbaros",
+      "link": "https://symbaros.com.br",
+      "duration": "aug 2020 - mar 2022",
+      "intro": "Consultant:",
+      "description": "worked as a consultant front-end architect for a platform specialized in the rental of commercial space using artificial intelligence. I chose the technology and architecture for all the web pages, using VueJS as a base, and created integrations with APIs to retrieve information relating to property searches and their attributes."
+    },
+    {
+      "title": "Questrade",
+      "link": "https://www.questrade.com/home",
+      "duration": "june 2020 - dec 2020",
+      "intro": "Front-end Engineer:",
+      "description": "worked as a front-end engineer for a Canadian financial platform specializing in trading, using TypeScript, Angular8+, and SCSS to deliver high-performance and secure experiences to its users."
+    },
+    {
+      "title": "Blip.ai",
+      "link": "https://blip.ai",
+      "duration": "june 2019 - may 2020",
+      "intro": "Full Stack Developer:",
+      "description": "worked as a full stack developer on the chatbot-building platform BLiP.ai, using AngularJS and VueJS for the front-end, .NET Core for the back-end, and Python for parsing Natural Language Processing models, as well as creating an API in Django to enable queries to trained models."
+    },
+    {
+      "title": "Blip.ai",
+      "link": "https://blip.ai",
+      "duration": "jan 2018 - may 2019",
+      "intro": "Development Intern:",
+      "description": "worked as a computer science intern on the chatbot-building platform BLiP.ai using AngularJS and VueJS frameworks, provided solutions on artificial intelligence using Python, and analyzed Natural Language Processing models based on intentions and entities."
+    }
+  ],
+  "languages": [
+    {
+      "name": "English",
+      "level": "Level C1 (IELTS 7.5)",
+      "listing": ["fluent reading", "fluent writing", "fluent speech"]
+    },
+    {
+      "name": "French",
+      "level": "Level B2",
+      "listing": ["intermediate reading", "intermediate writing", "intermediate speech"]
+    },
+    {
+      "name": "Portuguese",
+      "listing": ["native"]
+    }
+  ],
+  "presentations": [
+    {
+      "title": "The Developer's Conference",
+      "link": "https://thedevconf.com/tdc/2019/belohorizonte/trilha-inteligencia-artificial",
+      "duration": "June 14th 2019",
+      "intro": "Word Embedding and Application",
+      "description": "How to develop an application to solve a recurring Natural Language Processing problem using the Word Embedding algorithm? We are going to explore the spell check task."
+    },
+    {
+      "title": "Developer Circle",
+      "link": "https://thedevconf.com/tdc/2019/belohorizonte/trilha-inteligencia-artificial",
+      "duration": "Feb 19th 2019",
+      "intro": "How To Learn Using Text?",
+      "description": "To use words in mathematical models, we rely on transforming them into some form of numerical representation. One of many algorithms that perform such task is the Word Embedding."
+    }
+  ],
+  "profile": {
+    "about": {
+      "intro": "I like to use my skills to help communities, contribute to people's lives and to building a better world. I am already very lucky to work for a company committed to the environment, which plants trees in several countries.",
+      "experience": "I have more than {years} years of experience in front-end development. I'm particularly interested in code architecture, quality and performance. I'm proficient in JavaScript and TypeScript, as well as technologies related to creating web pages, and I have a special fondness for CSS animations."
+    },
+    "areas": [
+      {
+        "title": "Volunteering",
+        "text": "If you represent a non-profit organization in search of volunteers to pick up some work, please don't hesitate to contact me. I'll be happy to lend my expertise for free on my spare time if our goals align."
+      },
+      {
+        "title": "Mentoring",
+        "text": "If you are from an underprivileged or discriminated group and in search for a mentor, please get in touch. I will be glad to offer mentorship, or have a small chat. I have helped a few free minority-aimed initiatives in the past, as a support for programming teachers."
+      }
+    ]
+  },
+  "projects": [
+    {
+      "title": "sq-learn",
+      "link": "https://sqlearn.net",
+      "duration": "www.sqlearn.net",
+      "intro": "Database Query Learning",
+      "description": "The goal of sq-learn is to help everyone who wants to learn queries in SQL by having an intuitive interface to visualize the database. I used VueJS for the page, and JISON to create a SQL parser in JavaScript."
+    }
+  ],
+  "contact": {
+    "name": {
+      "label": "Name",
+      "placeholder": "Type your name"
+    },
+    "subject": {
+      "label": "Subject",
+      "placeholder": "Type the subject"
+    },
+    "email": {
+      "label": "E-mail",
+      "placeholder": "Type your e-mail"
+    },
+    "message": {
+      "label": "Message",
+      "placeholder": "Type your message here"
+    },
+    "captcha": {
+      "label": "I'm not a robot",
+      "placeholder": "Sum",
+      "errors": {
+        "abused": "Too many tries",
+        "incorrect": "Incorrect result"
+      }
+    },
+    "sent": "Message sent successfully!",
+    "button": "Send"
+  },
+  "common": {
+    "close": "Close"
+  }
+}

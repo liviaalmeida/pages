@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "baseUrl": ".",
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ES2021"
+    ],
+    "module": "ESNext",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "skipLibCheck": true,
+    "target": "ES2021",
+    "types": [
+      "node",
+      "vite/client",
+      "vitest/globals"
+    ],
+    "useDefineForClassFields": true,
+
+    /* Bundler mode */
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "moduleResolution": "bundler",
+    "noEmit": true,
+    "resolveJsonModule": true,
+
+    /* Linting */
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strict": true
+  },
+  "include": [
+    "src/**/*.spec.js",
+    "src/**/*.ts",
+    "src/**/*.vue",
+    "vitest.setup.ts"
+  ],
+  "references": [{
+    "path": "./tsconfig.node.json"
+  }]
+}

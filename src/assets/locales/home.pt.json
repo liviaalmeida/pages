@@ -1,0 +1,162 @@
+{
+  "title": {
+    "contact": "Contato",
+    "education": "Formação",
+    "experience": "Experiência Profissional",
+    "languages": "Idiomas",
+    "position": "Engenheira Front-end",
+    "presentations": "Apresentações",
+    "programming": "Linguagens",
+    "projects": "Projetos",
+    "socials": "Redes socials"
+  },
+  "menu": {
+    "about": "Sobre",
+    "knowledge": "Conhecimento",
+    "experience": "Experiência"
+  },
+  "skills": {
+    "languages": "Linguagens",
+    "web": "Páginas web",
+    "frameworks": "Frameworks",
+    "tools": "Ferramentas",
+    "tests": "Testes",
+    "databases": "Bancos de dados",
+    "skill": {
+      "accessibility": "acessibilidade"
+    }
+  },
+  "education": [
+    {
+      "name": "Universidade Federal de Minas Gerais (UFMG)",
+      "level": "2021",
+      "intro": "Bacharelado",
+      "listing": ["Ciência da Computação"]
+    }
+  ],
+  "experience": [
+    {
+      "title": "Ecosia",
+      "link": "https://ecosia.org",
+      "duration": "abr 2021 - presente",
+      "intro": "Engenheira Front-end:",
+      "description": "atuando como engenheira front-end no motor de busca que planta árvores. Usando JavaScript com Vue, Nuxt e Vite, assim como HTML e SCSS para criar páginas web tanto estáticas quanto renderizadas pelo servidor. Avalio o desempenho e a acessibilidade dessas páginas, garanto sua integridade por meio de testes, e me certifico que proporcionamos excelentes experiências aos nossos usuários."
+    },
+    {
+      "title": "Symbaros",
+      "link": "https://symbaros.com.br",
+      "duration": "ago 2020 - mar 2022",
+      "intro": "Consultora:",
+      "description": "atuação como consultora em arquitetura front-end para uma plataforma especializada em aluguel de espaços comerciais usando IA. Defini a tecnologia e a arquitetura do conjunto de páginas web, utilisando Vue.JS como base, e criei integrações com as APIs para obtenção de informações relativas à busca de bens imobiliários, assim como seus atributos."
+    },
+    {
+      "title": "Questrade",
+      "link": "https://www.questrade.com/home",
+      "duration": "jun 2020 - dez 2020",
+      "intro": "Engenheira Front-end:",
+      "description": "atuação como engenheira front-end em uma plataforma financeira canadense especializada em trading, usando o framework Angular8+, TypeScript e SCSS para fornecer uma experiência performática e segura a seus usuários."
+    },
+    {
+      "title": "Blip.ai",
+      "link": "https://blip.ai",
+      "duration": "jun 2019 - mai 2020",
+      "intro": "Desenvolvedora Full Stack:",
+      "description": "atuação como desenvolvedora full stack na plataforma de criação de chatbots BLiP.ai, utilizando os frameworks AngularJS e VueJS para o front-end, .NET core para o back-end, e Python para analisar modelos de Processamento de Linguagem Natural, além de criar uma API em Django para permitir consultas a modelos treinados."
+    },
+    {
+      "title": "Blip.ai",
+      "link": "https://blip.ai",
+      "duration": "jan 2018 - mai 2019",
+      "intro": "Estagiária em desenvolvimento:",
+      "description": "atuação como estagiária em desenvolvimento na plataforma de criação de chatbots BLiP.ai utilizando os frameworks AngularJS e VueJS, fornecimento de soluções de inteligência artificial com Python e análises de modelos de Processamento de Linguagem Natural baseados em intenções e entidades."
+    }
+  ],
+  "languages": [
+    {
+      "name": "Inglês",
+      "level": "Nível C1 (IELTS 7.5)",
+      "listing": ["leitura fluente", "escrita fluente", "fala fluente"]
+    },
+    {
+      "name": "Francês",
+      "level": "Nível B2",
+      "listing": ["leitura média", "escrita média", "fala média"]
+    },
+    {
+      "name": "Português",
+      "listing": ["nativa"]
+    }
+  ],
+  "presentations": [
+    {
+      "title": "The Developer's Conference",
+      "link": "https://thedevconf.com/tdc/2019/belohorizonte/trilha-inteligencia-artificial",
+      "duration": "14 jun 2019",
+      "intro": "Word Embedding e Aplicação",
+      "description": "Como desenvolver uma aplicação para um problema recorrente de Processamento de Linguagem Natural utilizando o Word Embedding? Exploração da tarefa de correção ortográfica."
+    },
+    {
+      "title": "Developer Circle",
+      "link": "https://devcbhmeetupfev2019.splashthat.com/",
+      "duration": "19 fev 2019",
+      "intro": "Como Aprender Usando Texto?",
+      "description": "O uso de palavras em modelos matemáticos depende da sua transformação em representações exatas. Um algoritmo que pode fazer isso é o Word Embedding."
+    }
+  ],
+  "profile": {
+    "about": {
+      "intro": "Gosto de utilisar minhas habilidades para ajudar comunidades, e contribuir para a vida das pessoas e a construção de um mundo melhor. Tenho já muita sorte de trabalhar em uma empresa comprometida com o meio ambiente, que planta árvores em vários países.",
+      "experience": "Tenho mais de {years} anos de experiência em desenvolvimento front-end. Me interesso particularmente pela arquitetura, qualidade e performance do código. Sou proficiente em JavaScript e TypeScript, e nas tecnologias ligadas à criação de páginas web, e tenho um carinho especial por animações em CSS."
+    },
+    "areas": [
+      {
+        "title": "Voluntariado",
+        "text": "Se você representa uma organização sem fins lucrativos em busca de voluntários para realizar algum trabalho, por favor não hesite em entrar em contato. Será um prazer utilizar minhas habilidades, gratuitamente em meu tempo livre, se nossos objetivos se alinharem."
+      },
+      {
+        "title": "Mentoria",
+        "text": "Se você pertence a alguma minoria ou grupo discriminado e está em busca de uma mentora, entre em contato. Terei prazer em oferecer orientação ou apenas conversar. Já ajudei algumas iniciativas gratuitas voltadas para minorias no passado, como suporte para professoras de programação."
+      }
+    ]
+  },
+  "projects": [
+    {
+      "title": "sq-learn",
+      "link": "https://sqlearn.net",
+      "duration": "www.sqlearn.net",
+      "intro": "Aprendizado em consultas a bancos de dados",
+      "description": "O objetivo do sq-learn é ajudar no aprendizado de consultas em SQL através de uma interface intuitiva que permite visualizar o banco de dados. Usei VueJS para a criação do site e JISON para criar um parser de SQL em JavaScript."
+    }
+  ],
+  "contact": {
+    "name": {
+      "label": "Nome",
+      "placeholder": "Digite seu nome"
+    },
+    "subject": {
+      "label": "Assunto",
+      "placeholder": "Digite o assunto"
+    },
+    "email": {
+      "label": "E-mail",
+      "placeholder": "Digite seu e-mail"
+    },
+    "message": {
+      "label": "Mensagem",
+      "placeholder": "Digite aqui sua mensagem"
+    },
+    "captcha": {
+      "label": "Não sou um robô",
+      "placeholder": "Soma",
+      "errors": {
+        "abused": "Muitas tentativas",
+        "incorrect": "Resultado incorreto"
+      }
+    },
+    "sent": "Mensagem enviada com sucesso!",
+    "button": "Enviar"
+  },
+  "common": {
+    "close": "Fechar"
+  }
+}
