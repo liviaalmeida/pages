@@ -8,7 +8,7 @@ import { createApp } from 'vue'
 import Mixpanel from 'mixpanel-browser'
 import { ObserveVisibility } from 'vue-observe-visibility'
 
-Mixpanel.init('993c79eddca27044b045ea158973bd99', {
+Mixpanel.init(import.meta.env.VITE_MP_KEY, {
   debug: import.meta.env.DEV ? true : false,
   ignore_dnt: import.meta.env.DEV ? true : false,
 })

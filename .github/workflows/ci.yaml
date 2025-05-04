@@ -8,6 +8,11 @@ on:
     branches:
       - main
 
+env:
+  VITE_MJ_SECURE_TOKEN: ${{ secrets.VITE_MJ_SECURE_TOKEN }}
+  VITE_MJ_FROM: ${{ secrets.VITE_MJ_FROM }}
+  VITE_MP_KEY: ${{ secrets.VITE_MP_KEY }}
+
 jobs:
   lint:
     name: Lint
