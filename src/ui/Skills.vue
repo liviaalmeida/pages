@@ -38,7 +38,7 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{ skills: Array<Skill>, title: string }>()
+defineProps<{ skills: Array<Skill>, title: string }>();
 </script>
 
 <style lang="scss" scoped>

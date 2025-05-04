@@ -65,40 +65,40 @@
 </template>
 
 <script setup lang="ts">
-import { inject, ref } from 'vue'
-import { useI18n } from 'vue-i18n'
-import mixpanel from 'mixpanel-browser'
-import { sendMail } from '@/assets/js'
-import { useStorage } from '@/composables/storage'
+import { inject, ref } from 'vue';
+import { useI18n } from 'vue-i18n';
+import mixpanel from 'mixpanel-browser';
+import { sendMail } from '@/assets/js';
+import { useStorage } from '@/composables/storage';
 
-import Button from '@/ui/Button.vue'
-import Captcha from '@/ui/Captcha.vue'
-import Input from '@/ui/Input.vue'
-import Modal from '@/ui/Modal.vue'
+import Button from '@/ui/Button.vue';
+import Captcha from '@/ui/Captcha.vue';
+import Input from '@/ui/Input.vue';
+import Modal from '@/ui/Modal.vue';
 
-const { t } = useI18n({ useScope: 'global' })
+const { t } = useI18n({ useScope: 'global' });
 
-const { getAbuse, setAbuse } = useStorage()
+const { getAbuse, setAbuse } = useStorage();
 
-const disabled = ref(getAbuse())
+const disabled = ref(getAbuse());
 const feedback = ref({
   message: '',
   reason: 'info' as ModalReason,
   title: '',
-})
+});
 
-const captcha = ref('')
-const modal = ref(false)
-const sending = ref(false)
-const valid = ref(false)
+const captcha = ref('');
+const modal = ref(false);
+const sending = ref(false);
+const valid = ref(false);
 function onInput(form: HTMLFormElement) {
-  valid.value = form.checkValidity() && !!captcha.value.length
+  valid.value = form.checkValidity() && !!captcha.value.length;
 }
 function resetForm() {
-  captcha.value = ''
-  modal.value = true
-  sending.value = false
-  valid.value = false
+  captcha.value = '';
+  modal.value = true;
+  sending.value = false;
+  valid.value = false;
 }
 
 const email = ref<Email>({
@@ -106,14 +106,14 @@ const email = ref<Email>({
   message: '',
   name: '',
   subject: '',
-})
+});
 function resetEmail() {
   email.value = {
     email: '',
     message: '',
     name: '',
     subject: '',
-  }
+  };
 }
 
 function setError(message: string) {
@@ -121,26 +121,26 @@ function setError(message: string) {
     message,
     reason: 'error',
     title: 'Ops!',
-  }
+  };
   mixpanel.track('Message-error-send', {
     error: message,
-  })
-  resetForm()
+  });
+  resetForm();
 }
 function onAbuse() {
-  setAbuse()
-  disabled.value = true
-  const message = t('home.contact.captcha.errors.abused')
-  setError(message)
+  setAbuse();
+  disabled.value = true;
+  const message = t('home.contact.captcha.errors.abused');
+  setError(message);
 }
 function onIncorrect() {
-  const message = t('home.contact.captcha.errors.incorrect')
-  setError(message)
+  const message = t('home.contact.captcha.errors.incorrect');
+  setError(message);
 }
 
 function onSubmit() {
-  mixpanel.track('Message-send')
-  sending.value = true
+  mixpanel.track('Message-send');
+  sending.value = true;
 }
 function sendMessage() {
   sendMail(email.value)
@@ -149,13 +149,13 @@ function sendMessage() {
         message: t('home.contact.sent'),
         reason: 'success',
         title: 'Ok!',
-      }
-      mixpanel.track('Message-sent')
-      resetEmail()
-      resetForm()
+      };
+      mixpanel.track('Message-sent');
+      resetEmail();
+      resetForm();
     }).catch((error) => {
-      setError(error.message)
-    })
+      setError(error.message);
+    });
 }
 </script>
 

@@ -6,12 +6,12 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed } from 'vue';
 
 const props = withDefaults(
   defineProps<{ color?: COLOR, name: string }>(),
   { color: 'gray' },
-)
+);
 
 const COLORS: Record<COLOR,string> = {
   gray: '#1e1e1e',
@@ -19,12 +19,12 @@ const COLORS: Record<COLOR,string> = {
   red: '#ff0000',
   white: '#fff',
   yellow: '#ffff00',
-}
+};
 
 const style = computed(() => ({
   backgroundColor: COLORS[props.color],
   maskImage: `url('/icons/${props.name}.svg')`,
-}))
+}));
 </script>
 
 <style lang="scss" scoped>

@@ -21,22 +21,22 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref } from 'vue';
 
-defineProps<{ loading?: boolean }>()
+defineProps<{ loading?: boolean }>();
 
-const wave = ref<HTMLSpanElement | null>(null)
+const wave = ref<HTMLSpanElement | null>(null);
 function onClick() {
-  if (!wave.value) return
+  if (!wave.value) return;
 
-  const animate = 'button-wave--animate'
-  const { classList } = wave.value
-  if (classList.contains(animate)) return
+  const animate = 'button-wave--animate';
+  const { classList } = wave.value;
+  if (classList.contains(animate)) return;
 
-  classList.add(animate)
+  classList.add(animate);
   setTimeout(() => {
-    classList.remove(animate)
-  }, 400)
+    classList.remove(animate);
+  }, 400);
 }
 </script>
 

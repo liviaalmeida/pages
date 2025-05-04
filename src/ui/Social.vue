@@ -12,20 +12,20 @@
 </template>
 
 <script setup lang="ts">
-import mixpanel from 'mixpanel-browser'
+import mixpanel from 'mixpanel-browser';
 
-import Icon from '@/ui/Icon.vue'
+import Icon from '@/ui/Icon.vue';
 
 defineProps<{
   href: string
   image: string
   text: string
-}>()
+}>();
 
 function onClick(href: string) {
   mixpanel.track('Icon-click', {
     to: href,
-  })
+  });
 }
 </script>
 

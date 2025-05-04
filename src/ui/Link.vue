@@ -12,7 +12,7 @@
 withDefaults(
   defineProps<{ href: string, target?: string }>(),
   { target: '_blank' },
-)
+);
 </script>
 
 <style lang="scss" scoped>

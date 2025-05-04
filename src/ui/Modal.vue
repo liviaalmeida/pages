@@ -35,26 +35,26 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
-import Icon from '@/ui/Icon.vue'
+import { computed } from 'vue';
+import Icon from '@/ui/Icon.vue';
 
 const props = defineProps<{
   message: string
   modelValue: boolean
   title: string
   reason: ModalReason
-}>()
-const emit = defineEmits(['update:modelValue'])
+}>();
+const emit = defineEmits(['update:modelValue']);
 
 const ERRORCOLOR: Record<string, COLOR> = {
   'error': 'red',
   'info': 'yellow',
   'success': 'green',
-}
-const color = computed(() => ERRORCOLOR[props.reason])
+};
+const color = computed(() => ERRORCOLOR[props.reason]);
 
 function onClose() {
-  emit('update:modelValue', false)
+  emit('update:modelValue', false);
 }
 </script>
 

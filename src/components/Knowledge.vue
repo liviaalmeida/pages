@@ -22,17 +22,17 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
-import { useI18n } from 'vue-i18n'
+import { computed } from 'vue';
+import { useI18n } from 'vue-i18n';
 
-import Section from '@/ui/Section.vue'
-import Skills from '@/ui/Skills.vue'
+import Section from '@/ui/Section.vue';
+import Skills from '@/ui/Skills.vue';
 
-const { t, tm } = useI18n({ useScope: 'global' })
+const { t, tm } = useI18n({ useScope: 'global' });
 
-const education = computed<Skill[]>(() => tm('home.education'))
+const education = computed<Skill[]>(() => tm('home.education'));
 
-const languages = computed<Skill[]>(() => tm('home.languages'))
+const languages = computed<Skill[]>(() => tm('home.languages'));
 
 const programming = computed<Skill[]>(() => [
   {
@@ -65,7 +65,7 @@ const programming = computed<Skill[]>(() => [
     listing: ['SQL'],
     stars: 3,
   },
-])
+]);
 </script>
 
 <style lang="scss" scoped>

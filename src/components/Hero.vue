@@ -45,21 +45,21 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
-import { useI18n } from 'vue-i18n'
+import { computed } from 'vue';
+import { useI18n } from 'vue-i18n';
 
-import Link from '@/ui/Link.vue'
-import Section from '@/ui/Section.vue'
+import Link from '@/ui/Link.vue';
+import Section from '@/ui/Section.vue';
 
-const { t, tm } = useI18n({ useScope: 'global' })
+const { t, tm } = useI18n({ useScope: 'global' });
 
-const years = new Date().getFullYear() - 2018
+const years = new Date().getFullYear() - 2018;
 
 const about = computed<string[]>(() => [
   t('home.profile.about.intro'),
   t('home.profile.about.experience', { years }),  
-])
-const areas = computed<Area[]>(() => tm('home.profile.areas'))
+]);
+const areas = computed<Area[]>(() => tm('home.profile.areas'));
 </script>
 
 <style lang="scss" scoped>

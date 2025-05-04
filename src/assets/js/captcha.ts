@@ -1,4 +1,4 @@
-import jsCaptcha from 'js-captcha'
+import jsCaptcha from 'js-captcha';
 
 export default function initCaptcha(el: string, callback: Captcha): jsCaptcha {
   return new jsCaptcha({
@@ -14,5 +14,5 @@ export default function initCaptcha(el: string, callback: Captcha): jsCaptcha {
       width: 45,
     },
     requiredValue: '=',
-  })
+  });
 }

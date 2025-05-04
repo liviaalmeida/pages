@@ -1,4 +1,4 @@
-import { Email as client } from '@/assets/js/smtp'
+import { Email as client } from '@/assets/js/smtp';
 
 export default function sendMail(email: Email): Promise<void> {
   return new Promise((resolve, reject) => {
@@ -11,16 +11,16 @@ export default function sendMail(email: Email): Promise<void> {
         Body: `FROM: ${email.name || 'NO NAME'}\n|\nCONTACT: ${email.email || 'NO MAIL'}\n|\nMESSAGE: ${email.message}`,
       }).then(
         (message: string) => {
-          if (!/^OK$/.test(message)) reject(message)
-          resolve()
+          if (!/^OK$/.test(message)) reject(message);
+          resolve();
         },
       ).catch(
         (error) => {
-          reject(error)
+          reject(error);
         },
-      )
+      );
     } catch (error) {
-      reject(error)
+      reject(error);
     }
-  })
+  });
 }

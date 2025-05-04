@@ -15,19 +15,19 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from 'vue'
+import { ref, watch } from 'vue';
 
-const props = defineProps<{ modelValue: boolean }>()
-const emit = defineEmits(['update:modelValue'])
+const props = defineProps<{ modelValue: boolean }>();
+const emit = defineEmits(['update:modelValue']);
 
-const checked = ref(props.modelValue)
+const checked = ref(props.modelValue);
 
 function onChange() {
-  emit('update:modelValue', checked.value)
+  emit('update:modelValue', checked.value);
 }
 watch(() => props.modelValue, (value) => {
-  checked.value = value
-})
+  checked.value = value;
+});
 </script>
 
 <style lang="scss" scoped>

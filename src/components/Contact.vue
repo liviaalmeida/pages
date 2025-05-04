@@ -27,11 +27,11 @@
 </template>
 
 <script setup lang="ts">
-import Coffee from '@/ui/Coffee.vue'
-import Section from '@/ui/Section.vue'
-import Social from '@/ui/Social.vue'
+import Coffee from '@/ui/Coffee.vue';
+import Section from '@/ui/Section.vue';
+import Social from '@/ui/Social.vue';
 
-import Message from '@/components/Message.vue'
+import Message from '@/components/Message.vue';
 
 const contacts: Contact[] = [
   {
@@ -44,7 +44,7 @@ const contacts: Contact[] = [
     text: '@liviaalmeida',
     href: 'https://github.com/liviaalmeida',
   },
-]
+];
 </script>
 
 <style lang="scss" scoped>

@@ -39,11 +39,11 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onBeforeUnmount, onMounted } from 'vue'
-import mixpanel from 'mixpanel-browser'
+import { ref, onBeforeUnmount, onMounted } from 'vue';
+import mixpanel from 'mixpanel-browser';
 
-import Hamburger from '@/ui/Hamburger.vue'
-import Locale from '@/components/Locale.vue'
+import Hamburger from '@/ui/Hamburger.vue';
+import Locale from '@/components/Locale.vue';
 
 const links: Link[] = [
   {
@@ -62,36 +62,36 @@ const links: Link[] = [
     text: 'home.title.contact',
     class: 'contact',
   },
-]
+];
 
-const open = ref(false)
+const open = ref(false);
 function navigateTo(targetClass: string, offset = 0): void {
-  const el = document.querySelector(`.${targetClass}`) as HTMLElement
-  const { top } = el.getBoundingClientRect()
+  const el = document.querySelector(`.${targetClass}`) as HTMLElement;
+  const { top } = el.getBoundingClientRect();
 
   window.scrollTo({
     top: window.scrollY + top + offset,
-  })
+  });
 }
 function onNav(toClass: string) {
-  navigateTo(toClass, -60)
-  open.value = false
+  navigateTo(toClass, -60);
+  open.value = false;
 
   mixpanel.track('Menu-click', {
     to: toClass,
-  })
+  });
 }
 
-const background = ref(false)
+const background = ref(false);
 function onScroll() {
-  background.value = window.scrollY > 61
+  background.value = window.scrollY > 61;
 }
 onMounted(() => {
-  window.addEventListener('scroll', onScroll)
-})
+  window.addEventListener('scroll', onScroll);
+});
 onBeforeUnmount(() => {
-  window.removeEventListener('scroll', onScroll)
-})
+  window.removeEventListener('scroll', onScroll);
+});
 </script>
 
 <style lang="scss" scoped>

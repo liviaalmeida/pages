@@ -62,20 +62,20 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-import mixpanel from 'mixpanel-browser'
+import { ref } from 'vue';
+import mixpanel from 'mixpanel-browser';
 
-defineProps<{ timeEvents: TimeEvent[], title?: string }>()
+defineProps<{ timeEvents: TimeEvent[], title?: string }>();
 
-const visible = ref(false)
+const visible = ref(false);
 function onVisible(isVisible: boolean) {
-  visible.value = isVisible
+  visible.value = isVisible;
 }
 
 function onEventClick(title: string) {
   mixpanel.track('Event-click', {
     event: title,
-  })
+  });
 }
 </script>
 

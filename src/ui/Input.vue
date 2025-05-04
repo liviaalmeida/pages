@@ -31,29 +31,29 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref, useAttrs } from 'vue'
+import { computed, ref, useAttrs } from 'vue';
 
-const props = defineProps<{ label: string }>()
-const emit = defineEmits(['update:modelValue'])
+const props = defineProps<{ label: string }>();
+const emit = defineEmits(['update:modelValue']);
 
-const focus = ref(false)
-function onBlur() { focus.value = false }
-function onFocus() { focus.value = true }
+const focus = ref(false);
+function onBlur() { focus.value = false; }
+function onFocus() { focus.value = true; }
 
 function onModel({ value }: HTMLInputElement | HTMLTextAreaElement) {
-  emit('update:modelValue', value)
+  emit('update:modelValue', value);
 }
 
-const attrs = useAttrs()
+const attrs = useAttrs();
 const labelText = computed(() => {
   if ('required' in attrs && attrs.required !== false) {
-    return props.label.concat(' *')
+    return props.label.concat(' *');
   }
-  return props.label
-})
+  return props.label;
+});
 const disabled = computed(() => {
-  return 'disabled' in attrs && attrs.disabled !== false
-})
+  return 'disabled' in attrs && attrs.disabled !== false;
+});
 </script>
 
 <style lang="scss" scoped>
