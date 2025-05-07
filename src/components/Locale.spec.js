@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils';
 import JSCookie from 'js-cookie';
 import mixpanel from 'mixpanel-browser';
-import { keys } from '@/composables/storage';
+import { keys } from '@/composables/storage.ts';
 
 import Locale from './Locale.vue';
 

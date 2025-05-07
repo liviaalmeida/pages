@@ -1,4 +1,4 @@
-import { Email as client } from '@/assets/js/smtp';
+import { Email as client } from '@/assets/js/smtp.js';
 
 import sendMail from './mail';
 import { flushPromises } from '@vue/test-utils';

@@ -6,8 +6,8 @@ const mockChallenge = {
   validate: vi.fn(() => null),
 };
 
-vi.mock('@/assets/js', () => ({
-  initCaptcha: (_, callback) => {
+vi.mock('@/assets/js/captcha.ts', () => ({
+  default: (_, callback) => {
     mockChallenge.callback = callback;
     return mockChallenge;
   },

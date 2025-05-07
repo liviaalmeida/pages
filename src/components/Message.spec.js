@@ -1,8 +1,8 @@
 import { flushPromises, mount } from '@vue/test-utils';
 import JSCookie from 'js-cookie';
 import mixpanel from 'mixpanel-browser';
-import { sendMail } from '@/assets/js';
-import { keys } from '@/composables/storage';
+import sendMail from '@/assets/js/mail.ts';
+import { keys } from '@/composables/storage.ts';
 
 import Captcha from '@/ui/Captcha.vue';
 import Modal from '@/ui/Modal.vue';
@@ -10,12 +10,16 @@ import Modal from '@/ui/Modal.vue';
 import Message from './Message.vue';
 
 vi.mock('mixpanel-browser');
-vi.mock('@/assets/js', () => ({
-  initCaptcha: () => ({
+
+vi.mock('@/assets/js/captcha.ts', () => ({
+  default: () => ({
     reset: vi.fn(() => null),
     validate: vi.fn(() => null),
   }),
-  sendMail: vi.fn(async () => {}),
+}));
+
+vi.mock('@/assets/js/mail.ts', () => ({
+  default: vi.fn(async () => {}),
 }));
 
 describe('Message', () => {

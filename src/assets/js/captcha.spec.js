@@ -1,4 +1,4 @@
-import initCaptcha from './captcha';
+import initCaptcha from './captcha.ts';
 
 HTMLCanvasElement.prototype.getContext = () => ({
   clearRect: vi.fn(),
