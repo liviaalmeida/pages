@@ -15,7 +15,7 @@
 import { onMounted, ref, watch } from 'vue';
 import jCaptcha from 'js-captcha';
 
-import { initCaptcha } from '@/assets/js';
+import initCaptcha from '@/assets/js/captcha.ts';
 
 import Input from '@/ui/Input.vue';
 

@@ -68,8 +68,8 @@
 import { inject, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 import mixpanel from 'mixpanel-browser';
-import { sendMail } from '@/assets/js';
-import { useStorage } from '@/composables/storage';
+import sendMail from '@/assets/js/mail.ts';
+import { useStorage } from '@/composables/storage.ts';
 
 import Button from '@/ui/Button.vue';
 import Captcha from '@/ui/Captcha.vue';

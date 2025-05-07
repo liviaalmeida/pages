@@ -27,7 +27,7 @@
           type="button"
           @click="onClose"
         >
-          {{ $t('common.close') }}
+          {{ $t('home.common.close') }}
         </button>
       </div>
     </div>

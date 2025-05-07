@@ -1,5 +1,5 @@
 import { createI18n, LocaleMessages } from 'vue-i18n';
-import { useStorage } from '@/composables/storage';
+import { useStorage } from '@/composables/storage.ts';
 
 type Context = Record<string, Record<string, string>>
 const context: Context = import.meta.glob('./assets/locales/*.json', { eager: true });

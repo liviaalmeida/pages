@@ -1,4 +1,4 @@
-import { Email as client } from '@/assets/js/smtp';
+import { Email as client } from '@/assets/js/smtp.js';
 
 export default function sendMail(email: Email): Promise<void> {
   return new Promise((resolve, reject) => {
