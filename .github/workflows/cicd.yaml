@@ -56,3 +56,34 @@ jobs:
 
       - name: Runs unit tests
         run: yarn test:unit
+  
+  deploy:
+    name: Deploy
+    needs: test_unit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checks out code
+        uses: actions/checkout@v3
+
+      - name: Sets up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+
+      - name: Installs yarn
+        run: npm install -g yarn
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Build for production
+        run: yarn build
+
+      - name: Deploy to Github Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          external_repository: ${{ vars.PAGE_REPOSITORY }}
+          publish_branch: main
+          publish_dir: ./dist
+          destination_dir: ''
