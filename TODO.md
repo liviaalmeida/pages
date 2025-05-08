@@ -12,4 +12,4 @@
 
 ## Performance
 
-- [ ] Chunk build
+- [x] Chunk build

@@ -14,10 +14,10 @@ const plugins = (visualize = false) => {
   if (visualize) {
     array.push(
       visualizer({
-        template: 'treemap',
-        open: true,
         filename: 'dist/stats.html',
+        open: true,
         sourcemap: true,
+        template: 'treemap',
       }),
     );
   }
@@ -28,9 +28,30 @@ const plugins = (visualize = false) => {
 export default defineConfig(({ mode }) => ({
   base: '',
   build: {
-    chunkSizeWarningLimit: 550,
+    chunkSizeWarningLimit: 100,
+    emptyOutDir: true,
     outDir: './dist',
-    emptyOutDir: false,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          i18n: [
+            'vue-i18n',
+          ],
+          mixpanel: [
+            'mixpanel-browser',
+          ],
+          observe: [
+            'intersection-observer',
+            'vue-observe-visibility',
+          ],
+          vue: [
+            'vue',
+            'vue-router',
+          ],
+        },
+      },
+    },
+    sourcemap: true,
   },
   css: {
     preprocessorOptions: {
