@@ -29,7 +29,7 @@ const COLORS: Record<COLOR,string> = {
 };
 
 const style = computed(() => ({
-  backgroundColor: COLORS[props.color],
+  backgroundColor: props.visible ? COLORS[props.color] : 'transparent',
   maskImage: props.visible ? `url('/icons/${props.name}.svg')` : '',
 }));
 </script>
