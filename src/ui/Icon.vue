@@ -9,8 +9,15 @@
 import { computed } from 'vue';
 
 const props = withDefaults(
-  defineProps<{ color?: COLOR, name: string }>(),
-  { color: 'gray' },
+  defineProps<{
+    color?: COLOR,
+    name: string,
+    visible?: boolean,
+  }>(),
+  {
+    color: 'gray',
+    visible: true,
+  },
 );
 
 const COLORS: Record<COLOR,string> = {
@@ -23,19 +30,27 @@ const COLORS: Record<COLOR,string> = {
 
 const style = computed(() => ({
   backgroundColor: COLORS[props.color],
-  maskImage: `url('/icons/${props.name}.svg')`,
+  maskImage: props.visible ? `url('/icons/${props.name}.svg')` : '',
 }));
 </script>
 
 <style lang="scss" scoped>
+$size: 35px;
+
 .icon {
-  height: 35px;
-  width: 35px;
+  height: $icon;
+  width: $icon;
   mask-position: center;
   mask-repeat: no-repeat;
   mask-size: 100% 100%;
   -webkit-mask-position: center;
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: 100% 100%;
+}
+
+.icon-test {
+  color: red;
+  height: $size;
+  width: $size;
 }
 </style>

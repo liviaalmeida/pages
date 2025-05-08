@@ -8,7 +8,7 @@ vi.mock('mixpanel-browser');
 const href = 'www.example.com';
 const image = 'github';
 const text = 'Example';
-const options = { propsData: { href, image, text } };
+const options = { propsData: { href, image, text, visible: true } };
 
 describe('Social', () => {
   beforeEach(() => {

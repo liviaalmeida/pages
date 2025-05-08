@@ -2,6 +2,10 @@
   <Section
     :title="$t('home.title.contact')"
     class="contact"
+    v-visible="{
+      callback: onVisible,
+      once: true,
+    }"
   >
     <Message
       class="contact-form"
@@ -13,9 +17,10 @@
       <Social
         v-for="contact in contacts"
         :key="contact.image"
+        :href="contact.href"
         :image="contact.image"
         :text="contact.text"
-        :href="contact.href"
+        :visible="visible"
         class="contact-link"
       />
     </div>
@@ -27,6 +32,8 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
+
 import Coffee from '@/ui/Coffee.vue';
 import Section from '@/ui/Section.vue';
 import Social from '@/ui/Social.vue';
@@ -45,6 +52,11 @@ const contacts: Contact[] = [
     href: 'https://github.com/liviaalmeida',
   },
 ];
+
+const visible = ref(false);
+function onVisible(isVisible: boolean) {
+  visible.value = isVisible;
+}
 </script>
 
 <style lang="scss" scoped>

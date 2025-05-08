@@ -6,7 +6,7 @@
     rel="noopener noreferrer"
     @click="onClick(href)"
   >
-    <Icon :name="image" />
+    <Icon :name="image" :visible="visible" />
     {{ text }}
   </a>
 </template>
@@ -17,9 +17,10 @@ import mixpanel from 'mixpanel-browser';
 import Icon from '@/ui/Icon.vue';
 
 defineProps<{
-  href: string
-  image: string
-  text: string
+  href: string,
+  image: string,
+  text: string,
+  visible: boolean,
 }>();
 
 function onClick(href: string) {

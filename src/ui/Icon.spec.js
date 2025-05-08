@@ -25,4 +25,12 @@ describe('Icon', () => {
     const mask = icon.element.style['mask-image'];
     expect(mask).to.equal(`url('/icons/${name}.svg')`);
   });
+
+  it('does not set named image as mask image if not visible', async () => {
+    const wrapper = mount(Icon, options);
+    await wrapper.setProps({ visible: false });
+    const icon = wrapper.find('.icon');
+    const mask = icon.element.style['mask-image'];
+    expect(mask).to.be.empty;
+  });
 });

@@ -9,7 +9,6 @@
     <div class="hero-section">
       <figure class="hero-frame">
         <img
-          loading="lazy"
           src="/img/profile.webp"
           alt=""
           class="hero-image"
