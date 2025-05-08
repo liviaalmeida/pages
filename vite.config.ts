@@ -62,7 +62,7 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: plugins(mode === 'view'),
   preview: {
-    port: 8080,
+    port: 1991,
   },
   resolve: {
     alias: {
@@ -72,6 +72,6 @@ export default defineConfig(({ mode }) => ({
   },
   server: {
     host: 'localhost',
-    port: 8080,
+    port: 1991,
   },
 }));
