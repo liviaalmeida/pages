@@ -38,19 +38,13 @@ const style = computed(() => ({
 $size: 35px;
 
 .icon {
-  height: $icon;
-  width: $icon;
+  height: $size;
+  width: $size;
   mask-position: center;
   mask-repeat: no-repeat;
   mask-size: 100% 100%;
   -webkit-mask-position: center;
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: 100% 100%;
-}
-
-.icon-test {
-  color: red;
-  height: $size;
-  width: $size;
 }
 </style>
