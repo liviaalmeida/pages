@@ -3,7 +3,29 @@ import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import eslint from 'vite-plugin-eslint';
 
-export default defineConfig({
+import { visualizer } from 'rollup-plugin-visualizer';
+
+const plugins = (visualize = false) => {
+  const array = [
+    eslint(),
+    vue(),
+  ];
+
+  if (visualize) {
+    array.push(
+      visualizer({
+        template: 'treemap',
+        open: true,
+        filename: 'dist/stats.html',
+        sourcemap: true,
+      }),
+    );
+  }
+
+  return array;
+};
+
+export default defineConfig(({ mode }) => ({
   base: '',
   build: {
     chunkSizeWarningLimit: 550,
@@ -17,10 +39,7 @@ export default defineConfig({
       },
     },
   },
-  plugins: [
-    eslint(),
-    vue(),
-  ],
+  plugins: plugins(mode === 'view'),
   preview: {
     port: 8080,
   },
@@ -33,4 +52,4 @@ export default defineConfig({
     host: 'localhost',
     port: 8080,
   },
-});
+}));
