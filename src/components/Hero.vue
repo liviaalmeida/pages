@@ -19,6 +19,7 @@
       <div class="hero-text">
         <p
           v-for="paragraph in about"
+          :key="paragraph.slice(5)"
           class="hero-about"
         >
           {{ paragraph }}

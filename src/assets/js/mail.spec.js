@@ -91,7 +91,7 @@ describe('sendMail', () => {
   it('rejects promise if send does not return OK', async () => {
     const resolves = 'OTHER';
 
-    const sendSpy = vi
+    vi
       .spyOn(client, 'send')
       .mockResolvedValueOnce(resolves);
 
@@ -103,7 +103,7 @@ describe('sendMail', () => {
   it('rejects promise if send rejects', async () => {
     const rejects = 'ERROR';
 
-    const sendSpy = vi
+    vi
       .spyOn(client, 'send')
       .mockRejectedValueOnce(rejects);
 
@@ -115,7 +115,7 @@ describe('sendMail', () => {
   it('rejects promise if send throws an error', async () => {
     const throws = 'ERROR';
 
-    const sendSpy = vi
+    vi
       .spyOn(client, 'send')
       .mockImplementationOnce(() => { throw(throws); });
 

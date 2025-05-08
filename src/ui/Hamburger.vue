@@ -8,6 +8,7 @@
     >
     <div
       v-for="line in 3"
+      :key="line"
       class="hamburger-line"
       :class="`hamburger-line-${line}`"
     />

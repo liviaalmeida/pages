@@ -65,7 +65,7 @@
 </template>
 
 <script setup lang="ts">
-import { inject, ref } from 'vue';
+import { ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 import mixpanel from 'mixpanel-browser';
 import sendMail from '@/assets/js/mail.ts';

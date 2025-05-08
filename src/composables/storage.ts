@@ -12,8 +12,13 @@ export function useStorage() {
     return $cookies.get(key) || localStorage.getItem(key);
   }
 
-  function set(key: string, value: any, expires?: any) {
-    $cookies.set(key, value, expires);
+  function set(key: string, value: string, expires?: Date) {
+    $cookies.set(key, value, {
+      expires,
+      sameSite: 'strict',
+      secure: true,
+    });
+
     if (!expires) {
       localStorage.setItem(key, value);
     }
@@ -24,9 +29,9 @@ export function useStorage() {
   }
 
   function setAbuse() {
-    var expires = new Date();
+    const expires = new Date();
     expires.setTime(expires.getTime() + 1080000000);
-    set(keys.abuse, 1, expires);
+    set(keys.abuse, '1', expires);
   }
 
   function getLocale() {

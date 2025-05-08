@@ -28,6 +28,7 @@
         </li>
         <li
           v-for="skill in group.listing"
+          :key="skill"
           class="skills-item"
         >
           {{ skill }}

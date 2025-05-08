@@ -45,7 +45,7 @@ export default defineConfig(({ mode }) => ({
   },
   resolve: {
     alias: {
-      '@': resolve(__dirname, 'src'),
+      '@': resolve(process.cwd(), 'src'),
       'mixpanel-browser': 'mixpanel-browser/src/loaders/loader-module-core',
     },
   },

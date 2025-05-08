@@ -7,7 +7,7 @@
 ## Development
 
 - [ ] Upgrade libraries
-- [ ] Upgrade to latest eslint
+- [x] Upgrade to latest eslint
 - [ ] Add e2e tests
 
 ## Performance

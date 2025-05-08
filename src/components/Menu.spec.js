@@ -1,8 +1,6 @@
 import { flushPromises, mount } from '@vue/test-utils';
 import mixpanel from 'mixpanel-browser';
 
-import Hamburger from '@/ui/Hamburger.vue';
-
 import Menu from './Menu.vue';
 
 const options = { attachTo: document.body };

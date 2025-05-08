@@ -18,7 +18,7 @@ describe('App', () => {
 
   it('sends a page view on mount', () => {
     const trackSpy = vi.spyOn(mixpanel, 'track');
-    const wrapper = mount(App);
+    mount(App);
     expect(trackSpy).toHaveBeenCalledWith('Page-view');
   });
 });

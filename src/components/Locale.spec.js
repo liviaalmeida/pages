@@ -48,7 +48,7 @@ describe('Locale', () => {
   });
 
   it('sends a tracking event on locale change', async () => {
-    const trackSpy = vi.spyOn(mixpanel, 'track');
+    vi.spyOn(mixpanel, 'track');
     const from = 'en';
     const to = 'pt';
     JSCookie.set(keys.locale, from);
