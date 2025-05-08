@@ -9,7 +9,7 @@
     "build": "vite build",
     "build:view": "vite build --mode view",
     "preview": "vite preview",
-    "lint": "eslint **/*.{ts,vue}",
+    "lint": "eslint .",
     "test:unit": "vitest run --coverage",
     "test:unit:watch": "vitest"
   },
