@@ -47,10 +47,4 @@ $size: 35px;
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: 100% 100%;
 }
-
-.icon-test {
-  color: red;
-  height: $size;
-  width: $size;
-}
 </style>
