@@ -35,6 +35,8 @@ onBeforeMount(() => {
   if (savedLocale && locales.includes(savedLocale)) {
     locale.value = savedLocale;
   }
+
+  setLocale(locale.value);
 });
 
 function onClick(from: string, to: string) {

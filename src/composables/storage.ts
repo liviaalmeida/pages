@@ -16,7 +16,6 @@ export function useStorage() {
     $cookies.set(key, value, {
       expires,
       sameSite: 'strict',
-      secure: true,
     });
 
     if (!expires) {
