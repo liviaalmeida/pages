@@ -19,6 +19,14 @@ describe('Icon', () => {
     expect(bgColor).to.contain('rgb');
   });
 
+  it('sets transparent as background color if not visible', async () => {
+    const wrapper = mount(Icon, options);
+    await wrapper.setProps({ visible: false });
+    const icon = wrapper.find('.icon');
+    const bgColor = icon.element.style['background-color'];
+    expect(bgColor).to.equal('transparent');
+  });
+
   it('sets named image as mask image', () => {
     const wrapper = mount(Icon, options);
     const icon = wrapper.find('.icon');
