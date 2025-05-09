@@ -1,4 +1,4 @@
-import { resolve } from 'path';
+import { extname, resolve } from 'path';
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import eslint from 'vite-plugin-eslint';
@@ -33,6 +33,17 @@ export default defineConfig(({ mode }) => ({
     outDir: './dist',
     rollupOptions: {
       output: {
+        assetFileNames: (assetInfo) => {
+          const extension = extname(assetInfo.name);
+          switch (extension) {
+            case '.css':
+              return 'assets/css/[name]-[hash][extname]';
+            case '.woff2':
+              return 'assets/fonts/[name][extname]';
+            default:
+              return 'assets/[name]-[hash][extname]';
+          }
+        },
         manualChunks: {
           i18n: [
             'vue-i18n',
