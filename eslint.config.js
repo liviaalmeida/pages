@@ -20,7 +20,7 @@ export default [
     rules: {
       'comma-dangle': ['error', 'always-multiline'],
       'eol-last': ['error', 'always'],
-      'indent': ['error', 2],
+      'indent': ['error', 2, { 'SwitchCase': 1 }],
       'no-console': 'error',
       'no-debugger': 'error',
       'no-multiple-empty-lines': ['error', { max: 1 }],
